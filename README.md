@@ -20,12 +20,11 @@
 - Component Diagram
 - Data Flow Diagram
 ## Week 7
-  - Complete the database
+  - Complete the database which contains car details
   - Start building the website
 ## Week 8
   - Artefacts
   - UI Design
-  - User interface designs for Sprint 1
 ## Week 9
 ## Week 10
 ## Week 11

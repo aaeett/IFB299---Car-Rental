@@ -20,7 +20,11 @@
 - Component Diagram
 - Data Flow Diagram
 ## Week 7
+  - Complete the database
+  - Start building the website
 ## Week 8
+  - Artefacts
+  - UI Design
 ## Week 9
 ## Week 10
 ## Week 11

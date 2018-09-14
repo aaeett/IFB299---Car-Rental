@@ -1,0 +1,14 @@
+#navbar-brand {
+	text-align: center;
+}
+#navbar-brand a {
+	font-size: 48px; 
+	padding: 10px 10px;
+}
+.nav-item {
+	padding: 0px 20px;
+	margin: auto auto;
+}
+.navbar-collapse {
+	border: 1px;
+}

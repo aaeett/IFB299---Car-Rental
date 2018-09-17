@@ -27,6 +27,7 @@
   - UI Design
 ## Week 9
   -Deciding each member's artefacts
+  
     -Anh: Logical & Physical Diagrams, Component Diagram,.. 
     -Thy: Logical & Physical Diagrams, Class Diagram,..
     -Aetos:

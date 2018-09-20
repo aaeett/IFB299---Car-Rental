@@ -10,19 +10,21 @@
   <meta name="keywords" content="Ridingo cars for backpackers car rental brisbane australia">
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
   <!-- Script: Make my navbar transparent when the document is scrolled to top -->
   <script src="js/navbar-ontop.js"></script>
   <link rel="icon" href="img/logo.ico">
-  <link rel="stylesheet" href="css/style.css"> </head>
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="img/logo.svg" width="30" height="30" class="d-inline-block align-top mx-2" alt="">Pingendo</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img src="img/logo.svg" width="30" height="30"> Ridingo
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent"
+        aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
@@ -43,11 +45,13 @@
               <a class="dropdown-item" href="#sale">On Sale</a>
             </div>
           </li>
-          <li class="nav-item mx-2 mr-5">
+          <li class="nav-item mx-2 mr-md-5">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
+        </ul>
+        <ul class="navbar-nav">
           <div class="divider"></div>
-          <li id="signup" class="nav-item mx-2 ml-5">
+          <li class="nav-item mx-2 ml-md-5">
             <a class="nav-link" href="#login">Sign In</a>
           </li>
           <li class="nav-item mx-2">
@@ -57,45 +61,31 @@
       </div>
     </div>
   </nav>
-  
   <!-- Cover -->
-  <div class="pt-5 section-aquamarine" style="background-image: url('img/headerbg.png');">
+  <div class="pt-5" style="background-image: url('img/headerbg.png');">
     <div class="container mt-5 pt-5">
       <div class="row">
-        <div class="col-md-12">
-          <h1 class="text-center display-3">Welcome to RiDingo</h1>
-          <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="col-md-12 my-5 p-5 text-lg-left bg-light" style="border-radius: 25px;">
+            <h1 class="text-center">Search in our directory!</h1>
+          <form class="form-inline">
+            <div class="input-group w-100">
+              <input type="word" class="form-control" placeholder="Enter Keyword...">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">Search</button>
+              </div>
+            </div>
+          </form>
+          <a>More Options
+            <i class="fa fa-caret-down"></i>
+          </a>
         </div>
       </div>
-      <div class="row" style="position: relative; bottom: -120px;">
-        <div class="col-md-12 my-5 text-lg-left bg-light" style="border-radius: 25px;">
-          <div class="row">
-            <div class="col-md-12 p-4">
-              <form class="form-inline">
-                <div class="input-group w-100">
-                  <input type="word" class="form-control" placeholder="Enter Keyword...">
-                  <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">Search</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-12 text-right py-2">
-              <a>More Options
-                <i class="fa fa-caret-down"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
-  <!-- Article style section -->
+
   <!-- Recommendations -->
-  <div class="py-5" id="secommendations">
+  <div class="py-5" id="recommendations">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
@@ -104,15 +94,56 @@
       </div>
       <div class="row">
         <p class="lead">Locate the closest store.</p>
+        <div class="form-group w-100">
+            <label for="exampleFormControlSelect1">Select one:</label>
+            <select class="form-control" id="exampleFormControlSelect1">
+              <option>store 1</option>
+              <option>store 2</option>
+              <option>store 3</option>
+              <option>store 4</option>
+              <option>store 5</option>
+            </select>
+          </div>
       </div>
       <div class="row">
         <p class="lead">What are you using the car for?</p>
       </div>
+      <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+          <label class="form-check-label" for="exampleRadios1">
+            Mountains
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+          <label class="form-check-label" for="exampleRadios2">
+            Forest
+          </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+              Urban
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2">
+              Logistics
+            </label>
+          </div>
       <div class="row">
-        <p class="lead">How many people do you have?</p>
+        <p class="lead mr-3">How many people do you have?</p>
+            <div class="form-group w-100">
+              <input type="range" class="form-control-range" id="formControlRange">
+            </div>
       </div>
       <div class="row">
         <p class="lead">When do you need the car?</p>
+        <div class="form-group w-100">
+            <label for="exampleFormControlSelect1">Enter date:</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+          </div>
       </div>
     </div>
   </div>
@@ -153,13 +184,12 @@
   </div>
   <!-- Bootstrap JavaScript dependencies -->
   <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
   <!-- Script: Smooth scrolling between anchors in the same page -->
   <script src="js/smooth-scroll.js"></script>
-  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:250px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;
-    <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
-  </pingendo>
 </body>
 
 </html>

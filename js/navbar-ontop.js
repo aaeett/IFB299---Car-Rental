@@ -30,7 +30,7 @@
 			update()
 		})
 		update()
-		// still hacking to avoid flickering
+		// to avoid flickering
 		setTimeout(function() {
 			document.querySelector("#temp-navbar-ontop").remove()
 		})

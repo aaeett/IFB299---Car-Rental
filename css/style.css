@@ -14,7 +14,7 @@
   padding-top: 61.8125px;
 }
 
-#search {
+#searchform {
   margin: 6rem 0rem;
   padding: 3rem;
   background-color: whitesmoke;
@@ -31,8 +31,12 @@
   transition: 300ms linear all;
 }
 
-#moreoptions input {
-  width: 300px;
+#moreoptions .form-group .filter {
+  margin: .5rem 0;
+}
+
+#startdate, #enddate, #store{
+  width: 200px;
   display: inline-block;
 }
 

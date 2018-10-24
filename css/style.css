@@ -1,37 +1,184 @@
+/* Universal */
+
 /* Animate state between .navbar and .navbar-ontop */
 .navbar {
   transition: background-color .5s ease-out;
 }
 
-.navbar-ontop {
-  background-color: transparent !important;
+#logo {
+  width: 30px;
+  height: 30px;
 }
 
-h1 {
-  font-size: 35px;
-
+.nav-item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
+/* Home */
 #cover {
-  padding: 100px;
+  background-image: url('../img/headerbg.png');
+  padding-top: 61.8125px;
+  height: 800px;
 }
 
-#search {
-  background-color: rgba(245, 245, 245, 0.8);
-  margin: 50px;
-  padding: 75px;
-  border-radius: 25px;
+
+#searchform {
+  margin: 9rem 0rem;
+  padding: 3rem;
+  background-color: whitesmoke;
 }
 
-::-webkit-datetime-edit {}
-::-webkit-datetime-edit-fields-wrapper
-::-webkit-datetime-edit-text
-::-webkit-datetime-edit-month-field
-::-webkit-datetime-edit-day-field
-::-webkit-datetime-edit-year-field
-::-webkit-inner-spin-button
-::-webkit-calendar-picker-indicator
-
-#moreoption {
-  margin: 1px;
+#searchform a[aria-expanded='true']>.expand_caret {
+  transform: rotate(-180deg);
+  transition: 300ms linear all;
 }
+
+#moreoptions .form-group .filter {
+  margin: .5rem 0;
+}
+
+#startdate, #enddate, #store{
+  width: 200px;
+  display: inline-block;
+}
+
+#enddate::after, #startdate::after {
+  content: "\f073";
+  font: 14px FontAwesome;
+}
+
+.searchform a{
+  float: right;
+  text-decoration: none;
+  color: rgba(33, 37, 41, 1);
+}
+
+/* Vehicle Content */
+
+.ui-title-page, .breadcrumbs {
+  color: white;
+}
+
+.breadcrumbs a {
+  color: white;
+  font-weight: bold;
+}
+
+.car-price {
+  color: rgb(210, 88, 62);
+  display: block;
+  font-size: 36px;
+  font-weight: 600;
+  height: 51px;
+  line-height: 51.4286px;
+}
+
+.card-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background-color: white !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.col-button {
+  cursor: pointer;
+  display: inline;
+  font-family: Poppins;
+  line-height: 22px !important;
+  font-size: 20px !important;
+  font-weight: 600 !important;
+  color: #222 !important;
+}
+
+.col-button:hover, .col-button:focus, .col-button:disabled {
+  text-decoration: none !important;
+}
+
+.collapse-text {
+  box-sizing: border-box;
+  color: rgb(34, 34, 34);
+  display: block;
+  font-family: Poppins;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.my-tab {
+  margin-bottom: 35px;
+  padding: 0;
+  background: #f4f4f4;
+}
+
+.my-tab .nav-item {
+  cursor: pointer;
+  padding: 15px 25px 10px 25px;
+  border-radius: 0 !important;
+  font-weight: 600;
+  color: #222;
+  font-size: 14px;
+}
+
+.my-tab .nav-link {
+  padding: 0px;
+}
+
+.settingbar {
+  padding: 26px 32px;
+  background-color: #fff;
+}
+
+.settingbar-title {
+  font-size: 15px;
+  color: #222;
+  text-transform: uppercase;
+}
+
+.left {
+  display: inline-block;
+  font-weight: 500;
+  color: #222;
+  transition: all .3s;
+  text-transform: uppercase;
+}
+
+.right {
+  display: inline-block;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.row.settingtable {
+  margin-bottom: 15px;
+}
+
+.media-body {
+  overflow: hidden;
+}
+
+.realted-title {
+  font-size: 16px;
+  line-height: 18px;
+  color: #555;
+}
+
+.related-price {
+  margin-bottom: 12px;
+  font: 500 13px Ubuntu;
+  text-align: left;
+  text-transform: uppercase;
+  color: #dc2d13;
+}
+
+.related-par {
+  font-size: 13px;
+  color: #777;
+}
+
+.car-media {
+  margin: 20px 0px;
+}
+
+/* Directory */

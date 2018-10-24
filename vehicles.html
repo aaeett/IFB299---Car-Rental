@@ -5,161 +5,183 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- PAGE settings -->
+  <link rel="icon" href="img/logo.ico">
   <title>Ridingo - cars for backpackers</title>
-  <meta name="description" content="Company site of a vehicle rental company.">
   <meta name="keywords" content="Ridingo cars for backpackers car rental brisbane australia">
+  <meta name="description" content="Company site of a vehicle rental company.">
   <!-- CSS dependencies -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="stylesheet" href="css/style.css" type="text/css">
-  <link rel="icon" href="img/logo.ico">
-  <link rel="stylesheet" href="css/style.css"> </head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <!-- Script: Make my navbar transparent when the document is scrolled to top -->
+  <script src="js/navbar-ontop.js"></script>
+  <style>
+    .navbar-ontop {
+  background-color: transparent !important; }
+</style>
+</head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top navbar-ontop">
     <div class="container">
       <a class="navbar-brand" href="#">
-        <img src="img/logo.svg" width="30" height="30" class="d-inline-block align-top mx-2" alt="">Pingendo</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <img id="logo" src="img/logo.svg" alt="Logo">
+        Ridingo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
-        <ul class="navbar-nav">
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#home">Home</a>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'homepage' %}">Home</a>
           </li>
-          <li class="nav-item mx-2">
-            <a class="nav-link" href="#about">About</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
           </li>
-          <li class="nav-item dropdown mx-2">
-            <a id="vehicle" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Vehicle</a>
+          <li class="nav-item dropdown">
+            <a id="vehicle" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+              aria-haspopup="true" aria-expanded="false">Directory</a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="#vehicles">Available Vehicles</a>
-              <a class="dropdown-item" href="#popular">Most Popular</a>
-              <a class="dropdown-item" href="#picked">Handpicked</a>
-              <!-- <div class="dropdown-divider"></div> -->
-              <a class="dropdown-item" href="#sale">On Sale</a>
+              <a class="dropdown-item" href="/vehicles">Available Vehicles</a>
+              <a class="dropdown-item" href="/popular">Most Popular</a>
+              <a class="dropdown-item" href="/picked">Handpicked</a>
+              <a class="dropdown-item" href="/sale">On Sale</a>
             </div>
           </li>
-          <li class="nav-item mx-2 mr-2 mr-md-5">
-            <a class="nav-link" href="#contact">Contact</a>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
           </li>
-          <div class="divider"></div>
-          <li id="signup" class="nav-item mx-2 ml-2 ml-md-5">
-            <a class="nav-link" href="#login">Sign In</a>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}">Sign In</a>
           </li>
-          <li class="nav-item mx-2">
+          <li class="nav-item">
             <a class="nav-link btn text-white btn-outline-primary" href="#signup">Sign Up</a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Cover -->
-  <div class="py-5" id="recommendations">
+
+  <!-- Results -->
+  <div id="directory" style="background-image: url('img/headerbg.png');">
     <div class="container">
-      <div class="row pt-5">
-        <div class="col-md-12 text-center">
-          <h2 class="pb-4">All Vehicles</h2>
-        </div>
-      </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-9">
-              <div class="card mb-4">
-                <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
-                <div class="card-body bg-info">
-                  <h5 class="card-title">Car_MakeName Car_Model Car_Series Car_SeriesYear </h5>
-                  <p class="card-text">Car_PriceNew Car_EngineSize Car_FuelSystem&nbsp;
-                    <br>Car_TankCapacity Car_Power Car_SeatingCapacity&nbsp;
-                    <br>Car_StandardTransmission Car_BodyType Car_Drive&nbsp;
-                    <br>Car_Wheelbase&nbsp;</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="https://res.cloudinary.com/carsguide/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/2018-Mazda-CX-9-Touring-AWD-SUV-Silver-Richard-Berry-1200x800p-1.JPG" alt="Card image cap">
-                <div class="card-body bg-info">
-                  <h5 class="card-title">NISSAN&nbsp;SX SPORTS LIMITED&nbsp;200&nbsp;1998 </h5>
-                  <p class="card-text">Price: $39990 Engine Size: 2.0L Fuel System: TURBO MPFI &nbsp;
-                    <br>Tank Capacity: 65L Car Power: 147Kw Car Seating: 4
-                    <br>Transmission Type: 5M Body Type: 2D COUPE Car Drive:&nbsp;RWD
-                    <br>Wheel base:&nbsp;2525mm </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-                <article class="card-group-item">
-                  <header class="card-header bg-info">
-                    <h6 class="title">Price</h6>
-                  </header>
-                  <div class="card-body">
-                    <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label>Min</label>
-                        <input class="form-control" id="inputEmail4" type="number" placeholder="$0"> </div>
-                      <div class="form-group col-md-6 text-right">
-                        <label>Max</label>
-                        <input class="form-control" type="number" placeholder="$1,0000"> </div>
-                    </div>
-                  </div>
-                  <!-- card-body.// -->
-                </article>
-                <!-- card-group-item.// -->
-                <article class="card-group-item">
-                  <header class="card-header bg-info">
-                    <h6 class="title">Make</h6>
-                  </header>
-                  <div class="card-body">
-                    <div class="custom-control custom-checkbox">
-                      <span class="float-right badge badge-light round">594</span>
-                      <input class="custom-control-input" id="Check1" type="checkbox" value="on">
-                      <label class="custom-control-label" for="Check1">Car_MakeName</label>
-                    </div>
-                    <!-- form-check.// -->
-                    <!-- form-check.// -->
-                    <!-- form-check.// -->
-                    <!-- form-check.// -->
-                  </div>
-                  <!-- card-body.// -->
-                </article>
-                <article class="card-group-item">
-                  <header class="card-header bg-info">
-                    <h6 class="title">Engine</h6>
-                  </header>
-                  <div class="card-body">
-                    <input class="engine_size" type="range" min="0" max="100">
-                    <span class="float-right badge badge-light round">1.8L</span>
-                  </div>
-                  <!-- card-body.// -->
-                </article>
-                <article class="card-group-item">
-                  <header class="card-header bg-info">
-                    <h6 class="title">Fuel System</h6>
-                  </header>
-                  <div class="card-body">
-                    <!-- form-check.// -->
-                    <!-- form-check.// -->
-                    <!-- form-check.// -->
-                    <div class="custom-control custom-checkbox">
-                      <span class="float-right badge badge-light round">594</span>
-                      <input class="custom-control-input" id="Check4" type="checkbox" value="on">
-                      <label class="custom-control-label" for="Check4">Car_FuelSystem</label>
-                    </div>
-                    <!-- form-check.// -->
-                  </div>
-                  <!-- card-body.// -->
-                </article>
-                <!-- card-group-item.// -->
-              </div>
-              <!-- card.// -->
-            </div>
-          </div>
+          <h1>
+            Results
+          </h1>
         </div>
       </div>
     </div>
+
+  </div>
+  </div>
+
+  <!-- Content -->
+  <div class="py-5" id="results">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="card mb-4">
+            <img class="card-img-top" src="https://pingendo.com/assets/photos/wireframe/photo-1.jpg" alt="Card image cap">
+            <div class="card-body bg-info">
+              <h5 class="card-title">Car_MakeName Car_Model Car_Series Car_SeriesYear </h5>
+              <p class="card-text">Car_PriceNew Car_EngineSize Car_FuelSystem&nbsp;
+                <br>Car_TankCapacity Car_Power Car_SeatingCapacity&nbsp;
+                <br>Car_StandardTransmission Car_BodyType Car_Drive&nbsp;
+                <br>Car_Wheelbase&nbsp;</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-img-top" src="https://res.cloudinary.com/carsguide/image/upload/f_auto,fl_lossy,q_auto,t_cg_hero_large/v1/editorial/2018-Mazda-CX-9-Touring-AWD-SUV-Silver-Richard-Berry-1200x800p-1.JPG"
+              alt="Card image cap">
+            <div class="card-body bg-info">
+              <h5 class="card-title">NISSAN&nbsp;SX SPORTS LIMITED&nbsp;200&nbsp;1998 </h5>
+              <p class="card-text">Price: $39990 Engine Size: 2.0L Fuel System: TURBO MPFI &nbsp;
+                <br>Tank Capacity: 65L Car Power: 147Kw Car Seating: 4
+                <br>Transmission Type: 5M Body Type: 2D COUPE Car Drive:&nbsp;RWD
+                <br>Wheel base:&nbsp;2525mm </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <article class="card-group-item">
+              <header class="card-header bg-info">
+                <h6 class="title">Price</h6>
+              </header>
+              <div class="card-body">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>Min</label>
+                    <input class="form-control" id="inputEmail4" type="number" placeholder="$0"> </div>
+                  <div class="form-group col-md-6 text-right">
+                    <label>Max</label>
+                    <input class="form-control" type="number" placeholder="$1,0000"> </div>
+                </div>
+              </div>
+              <!-- card-body.// -->
+            </article>
+            <!-- card-group-item.// -->
+            <article class="card-group-item">
+              <header class="card-header bg-info">
+                <h6 class="title">Make</h6>
+              </header>
+              <div class="card-body">
+                <div class="custom-control custom-checkbox">
+                  <span class="float-right badge badge-light round">594</span>
+                  <input class="custom-control-input" id="Check1" type="checkbox" value="on">
+                  <label class="custom-control-label" for="Check1">Car_MakeName</label>
+                </div>
+                <!-- form-check.// -->
+                <!-- form-check.// -->
+                <!-- form-check.// -->
+                <!-- form-check.// -->
+              </div>
+              <!-- card-body.// -->
+            </article>
+            <article class="card-group-item">
+              <header class="card-header bg-info">
+                <h6 class="title">Engine</h6>
+              </header>
+              <div class="card-body">
+                <input class="engine_size" type="range" min="0" max="100">
+                <span class="float-right badge badge-light round">1.8L</span>
+              </div>
+              <!-- card-body.// -->
+            </article>
+            <article class="card-group-item">
+              <header class="card-header bg-info">
+                <h6 class="title">Fuel System</h6>
+              </header>
+              <div class="card-body">
+                <!-- form-check.// -->
+                <!-- form-check.// -->
+                <!-- form-check.// -->
+                <div class="custom-control custom-checkbox">
+                  <span class="float-right badge badge-light round">594</span>
+                  <input class="custom-control-input" id="Check4" type="checkbox" value="on">
+                  <label class="custom-control-label" for="Check4">Car_FuelSystem</label>
+                </div>
+                <!-- form-check.// -->
+              </div>
+              <!-- card-body.// -->
+            </article>
+            <!-- card-group-item.// -->
+          </div>
+          <!-- card.// -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
   </div>
   <div class="pt-5 bg-dark">
     <div class="container">
@@ -195,10 +217,14 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:250px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 10px;right:10px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:250px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made
+    with Pingendo Free&nbsp;&nbsp;
     <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
   </pingendo>
 </body>

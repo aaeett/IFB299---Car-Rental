@@ -1,5 +1,6 @@
-/* Animate state between .navbar and .navbar-ontop */
+/* Universal */
 
+/* Animate state between .navbar and .navbar-ontop */
 .navbar {
   transition: background-color .5s ease-out;
 }
@@ -9,24 +10,26 @@
   height: 30px;
 }
 
+.nav-item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Home */
 #cover {
   background-image: url('../img/headerbg.png');
   padding-top: 61.8125px;
+  height: 800px;
 }
 
+
 #searchform {
-  margin: 6rem 0rem;
+  margin: 9rem 0rem;
   padding: 3rem;
   background-color: whitesmoke;
 }
 
-#search a {
-  float: right;
-  text-decoration: none;
-  color: rgba(33, 37, 41, 1);
-}
-
-#search a[aria-expanded='true']>.expand_caret {
+#searchform a[aria-expanded='true']>.expand_caret {
   transform: rotate(-180deg);
   transition: 300ms linear all;
 }
@@ -45,14 +48,13 @@
   font: 14px FontAwesome;
 }
 
-#location[type="text"] {
-  font-family: FontAwesome;
+.searchform a{
+  float: right;
+  text-decoration: none;
+  color: rgba(33, 37, 41, 1);
 }
 
-.nav-item {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
+/* Vehicle Content */
 
 .ui-title-page, .breadcrumbs {
   color: white;
@@ -179,3 +181,4 @@
   margin: 20px 0px;
 }
 
+/* Directory */

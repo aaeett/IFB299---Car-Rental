@@ -4,6 +4,31 @@
   transition: background-color .5s ease-out;
 }
 
+#logo {
+  width: 30px;
+  height: 30px;
+}
+
+#cover {
+  background-image: url('../img/headerbg.png');
+  padding-top: 61.8125px;
+}
+
+#search {
+  margin: 6rem 0rem;
+  padding: 3rem;
+  background-color: whitesmoke;
+}
+
+#search a {
+  float: right;
+}
+
+.nav-item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .ui-title-page, .breadcrumbs {
   color: white;
 }
@@ -90,38 +115,41 @@
   color: #222;
   transition: all .3s;
   text-transform: uppercase;
+}
 
-}
-.right{
+.right {
   display: inline-block;
-    font-weight: 300;
-    line-height: 1.7;
+  font-weight: 300;
+  line-height: 1.7;
 }
+
 .row.settingtable {
   margin-bottom: 15px;
 }
 
-.media-body{
+.media-body {
   overflow: hidden;
 }
 
-.realted-title{
+.realted-title {
   font-size: 16px;
   line-height: 18px;
   color: #555;
 }
 
-.related-price{
+.related-price {
   margin-bottom: 12px;
   font: 500 13px Ubuntu;
   text-align: left;
   text-transform: uppercase;
   color: #dc2d13;
 }
-.related-par{
+
+.related-par {
   font-size: 13px;
   color: #777;
 }
-.car-media{
+
+.car-media {
   margin: 20px 0px;
 }

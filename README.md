@@ -34,6 +34,15 @@
     -Manh:
     -Josepsh:
 ## Week 10
+- Keep catching up with the website
+- Build ROI and Root cause anaysis
 ## Week 11
+- Keep catching up with the website
+- Finishing up the database
+- Start to consider about artefacts
 ## Week 12
+- Try to finish up the website
+- Burndown chart
+- Finish up each other's artefacts
 ## Week 13
+- Finishing up everything before tutorial started
